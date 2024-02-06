@@ -28,7 +28,7 @@ laurea (286)
 6. Selezionare tutti i corsi di laurea magistrale (38)
     SELECT * 
     FROM `degrees` 
-    WHERE `name` LIKE '%magistrale%'
+    WHERE `level` = 'magistrale'
 
 7. Da quanti dipartimenti è composta l'università? (12)
    SELECT COUNT(*)
