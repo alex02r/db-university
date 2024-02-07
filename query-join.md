@@ -12,3 +12,9 @@
     ON `degrees`.`department_id` = `departments`.`id`
     WHERE `departments`.`name` LIKE 'Dipartimento di Neuroscienze' AND `degrees`.`name` LIKE 'Corso di Laurea Magistrale%';
 
+3. Selezionare tutti i corsi in cui insegna Fulvio Amato (id=44)
+    SELECT `courses`.`name`, `courses`.`description`
+    FROM `courses` 
+    INNER JOIN `course_teacher`
+    ON `course_teacher`.`course_id` = `courses`.`id` AND `course_teacher`.`teacher_id` = '44';
+
